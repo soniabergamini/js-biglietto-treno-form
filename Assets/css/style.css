@@ -1,0 +1,13 @@
+/* GENERAL STYLE */
+:root {
+    --green: #567E4F;
+    --blue: #023D7E;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poiret One', cursive;
+}
+
