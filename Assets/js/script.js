@@ -78,7 +78,6 @@ document.getElementById('createTicket').addEventListener("click",
                 // Visibilità dei dati nel form post-creazione Biglietto
                 event.preventDefault();
 
-
                 // Click sul Pulsante 'Il Mio Biglietto' "myTicket":
                 document.getElementById('myTicket').addEventListener("click",
                     function viewMyTicket() {

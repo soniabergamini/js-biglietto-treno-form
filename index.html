@@ -22,7 +22,7 @@
     <!-- Main Content -->
     <main class="dFlex justyCenter alignCenter">
         <!-- Finestra Prenotazione Biglietto -->
-        <div id="ticketWindow">
+        <div id="ticketWindow" class="textAlignCent">
             <h1 id="title">Benvenuto su ExpressTrain</h1>
             <p>Programma il tuo <strong>viaggio in treno</strong> insieme a noi in pochi semplici passaggi.</p>
             <p>Inserisci i tuoi dati per creare il tuo biglietto:</p>
@@ -32,12 +32,12 @@
                     <!-- Nome e Cognome -->
                     <div>
                         <label for="formNameSurname">Nome e Cognome</label>
-                        <input type="text" id="formNameSurname" class="dBlock cPointer" placeholder="Mario Rossi">
+                        <input type="text" id="formNameSurname" class="dBlock cPointer textAlignCent" placeholder="Mario Rossi">
                     </div>
                     <!-- Fascia Età Dropdown-->
                     <div>
                         <label for="formAge">Fascia d'età</label>
-                        <select name="Fascia d'età" id="formAge" class="dBlock cPointer">
+                        <select name="Fascia d'età" id="formAge" class="dBlock cPointer textAlignCent">
                             <option value="Minorenne">Minorenne</option>
                             <option value="Maggiorenne" selected>Maggiorenne</option>
                             <option value="Più di 65 Anni">Più di 65 anni</option>
@@ -51,7 +51,7 @@
                     <!-- KM da percorrere -->
                     <div>
                         <label for="formKm">KM da percorrere</label>
-                        <input type="number" id="formKm" placeholder="76" class="dBlock cPointer">
+                        <input type="number" id="formKm" placeholder="76" class="dBlock cPointer textAlignCent">
                     </div>
                 </div>
                 <strong id="guideText" class="dNone"><i class="fa-solid fa-share fa-rotate-270 fa-xs"></i> Il valore inserito non è valido. Riprova</strong>
@@ -85,14 +85,14 @@
                 </div>
                 <p>Completa subito l'acquisto del biglietto e regalati un viaggio indimenticabile!</p>
                 <button id="buyTicket" class="bgBlue cPointer"><i class="fa-solid fa-train-subway"></i> Acquista</button>
-                <button id="myTicket" class="bgGreen cPointer"><i class="fa-solid fa-train-subway"></i> Il Mio Biglietto</button>
+                <button id="myTicket" class="bgGreen cPointer"><i class="fa-solid fa-ticket"></i></i> Il Mio Biglietto</button>
                 <!-- Biglietto di Viaggio -->
                 <div id="viewMyTicket" class="dNone">
-                    <div>
+                    <div class="textAlignCent">
                         <h4>NOME PASSEGGERO</h4>
                         <h3 id="myTicketName"></h3>
                     </div>
-                    <div class="dFlex justySpaceBtw alignCenter">
+                    <div class="dFlex justySpaceBtw alignCenter textAlignCent">
                         <div>
                             <h4>CARROZZA</h4>
                             <h3 id="myTicketCoach"></h3>

@@ -29,6 +29,7 @@
 
 /* EXTRA GENERIC STYLE */
 .cPointer      {cursor: pointer;}
+.textAlignCent {text-align: center;}
 
 /* MAIN STYLE */
 main {
@@ -43,7 +44,6 @@ main {
     border: 1px solid white;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 2rem;
-    text-align: center;
     padding: .2rem;
     margin: 0 auto;
 }
@@ -66,7 +66,6 @@ form input , form select {
     margin-top: .3rem;
     padding: .2rem .4rem;
     font-size: .9rem;
-    text-align: center;
     border-radius: .9rem;
     border: .5px solid var(--blue);
 }
@@ -145,7 +144,6 @@ button:hover {
 #viewMyTicket > div:first-child {
     width: 180px;
     padding: 5% 2%;
-    text-align: center;
     color: whitesmoke;
     background: rgb(2, 61, 126);
     background: linear-gradient(133deg, rgba(2, 61, 126, 1) 0%, rgba(86, 126, 79, 1) 30%);
@@ -165,5 +163,4 @@ button:hover {
 #viewMyTicket > div:last-child {
     width: calc(100% - 180px);
     padding: 0 2%;
-    text-align: center;
 }
