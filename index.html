@@ -15,7 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Rubik+Microbe&display=swap"
         rel="stylesheet">
     <!-- Style CSS -->
-    <link rel="stylesheet" href="./Assets/css/style.css"> 
+    <!-- <link rel="stylesheet" href="./Assets/css/style.css">  -->
     <title>Biglietto Treno</title>
 </head>
 <body>
@@ -26,6 +26,31 @@
             <h1 id="title">Benvenuto su ExpressTrain</h1>
             <p>Programma il tuo <strong>viaggio in treno</strong> insieme a noi in pochi semplici passaggi.</p>
             <p>Inserisci i tuoi dati per creare il tuo biglietto:</p>
+            <!-- Inserimento dati per Creazione Biglietto -->
+            <form action="#">
+                <!-- Nome e Cognome -->
+                <label for="formNameSurname">Nome e Cognome</label>
+                <input type="text" id="formNameSurname" placeholder="Mario Rossi" required>
+                <!-- Fascia Età Dropdown-->
+                <label for="formAge">Fascia d'età</label>
+                <select name="Fascia d'età" id="formAge" required>
+                    <!-- <option selected>Scegli...</option> -->
+                    <option value="under18">Minorenne</option>
+                    <option value="adult" selected>Maggiorenne</option>
+                    <option value="over65">Più di 65 anni</option>
+                </select>
+                <!-- Data di Nascita -->
+                <!-- <label for="formBornDate">Data di nascita</label>
+                <input type="date" id="formBornDate" required> -->
+                <!-- KM da percorrere -->
+                <label for="formKm">KM da percorrere</label>
+                <input type="number" id="formKm" placeholder="76" required>
+                <!-- Pulsante Creazione Biglietto -->
+                <div>
+                    <button type="submit" id="createTicket"><i class="fa-solid fa-train-subway fa-xs"></i> Crea Biglietto</button>
+                    <button type="reset" id="resetTicket"><i class="fa-solid fa-trash-can fa-xs"></i> Cancella</button>
+                </div>
+            </form>
             
             
         </div>
