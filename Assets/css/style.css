@@ -11,3 +11,126 @@
     font-family: 'Poiret One', cursive;
 }
 
+/* BACKGROUND STYLE */
+.bgGreen       {background-color: var(--green);}
+.bgGreen:hover {background-color: #567e4fd2;}
+.bgBlue        {background-color: var(--blue);}
+.bgBlue:hover  {background-color: #023e7ec0;}
+
+/* FLEX & DISPLAY STYLE */
+.dNone         {display: none;}
+.dBlock        {display: block;}
+.dFlex         {display: flex;}
+.justyCenter   {justify-content: center;}
+.alignCenter   {align-items: center;}
+.justySpaceBtw {justify-content: space-between;}
+.fWrap         {flex-wrap: wrap;}
+.gap1em        {gap: 1em;}
+
+/* EXTRA GENERIC STYLE */
+.cPointer      {cursor: pointer;}
+
+/* MAIN STYLE */
+main {
+    width: 100%;
+    min-height: 100vh;
+    /* background-image: url(../img/background.jpeg); */
+    background-image: url(https://images7.alphacoders.com/598/598940.jpg);
+    background-size: cover;
+}
+
+#ticketWindow {
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 2rem;
+    text-align: center;
+    padding: .2rem;
+    margin: 0 auto;
+}
+
+#ticketWindow > * , form > div {
+    margin: 1.2rem 3rem;
+}
+
+h1 {
+    text-transform: capitalize;
+}
+
+h1,
+h4 {
+    font-family: 'Rubik Microbe', cursive;
+    color: var(--green);
+}
+
+form input , form select {
+    margin-top: .3rem;
+    padding: .2rem .4rem;
+    font-size: .9rem;
+    text-align: center;
+    border-radius: .9rem;
+    border: .5px solid var(--blue);
+}
+
+form label {
+    font-size: .8rem;
+    font-weight: 900;
+    color: var(--blue);
+}
+
+#guideText {
+    color: rgb(156, 7, 7);
+    font-size: .8rem;
+    margin: .2rem 0;
+}
+
+button {
+    color: white;
+    border-radius: 0.9rem;
+    border: 1px solid var(--green);
+    padding: 8px 22px;
+    letter-spacing: .13rem;
+    margin-bottom: .5rem; 
+}
+
+button:hover {
+    box-shadow: 0 6px 30px 1px rgba(0, 0, 0, 0.6);
+}
+
+#ticketWindow hr {
+    border: 0.5px solid var(--blue);
+    margin: 1rem 5%;
+}
+
+#ticketInfo {
+    display: none;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: .8rem;
+    padding: .8rem;
+}
+
+#ticketInfo > div:first-child {
+    border-bottom: 0.5px solid var(--blue);
+}
+
+#ticketInfo h3 {
+    text-align: left;
+    vertical-align: middle;
+    display: inline;
+}
+
+#ticketInfo img {
+    width: 2.5rem;
+    vertical-align: middle;
+    margin-right: 1%;
+}
+
+#ticketInfo div:not(:first-child) ,
+#ticketInfo p {
+    margin: 1rem 0;
+}
+
+#ticketInfo div > span {
+    font-size: .95rem;
+    text-transform: capitalize;
+}
