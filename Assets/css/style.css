@@ -96,6 +96,7 @@ button:hover {
     box-shadow: 0 6px 30px 1px rgba(0, 0, 0, 0.6);
 }
 
+/* Ticket Info Section Style */
 #ticketWindow hr {
     border: 0.5px solid var(--blue);
     margin: 1rem 5%;
@@ -133,4 +134,36 @@ button:hover {
 #ticketInfo div > span {
     font-size: .95rem;
     text-transform: capitalize;
+}
+
+/* Ticket Section Style */
+#viewMyTicket {
+    border: .5px dotted var(--blue);
+    border-radius: .8rem;
+}
+
+#viewMyTicket > div:first-child {
+    width: 180px;
+    padding: 5% 2%;
+    text-align: center;
+    color: whitesmoke;
+    background: rgb(2, 61, 126);
+    background: linear-gradient(133deg, rgba(2, 61, 126, 1) 0%, rgba(86, 126, 79, 1) 30%);
+    border-radius: .8rem;
+}
+
+#viewMyTicket > div:first-child > h3 {
+    text-transform: capitalize;
+    margin-top: 3rem;
+}
+
+#viewMyTicket > div:first-child > h4 {
+    color: var(--blue);
+    margin-bottom: 5%;
+}
+
+#viewMyTicket > div:last-child {
+    width: calc(100% - 180px);
+    padding: 0 2%;
+    text-align: center;
 }
