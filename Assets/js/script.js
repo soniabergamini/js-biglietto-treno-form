@@ -4,6 +4,9 @@ document.getElementById('createTicket').addEventListener("click",
 
         console.warn("Interaction: Click on CreateTicket Button.");
 
+        // Rimozione Dettagli di Viaggio (per chi cambia i valori nel form a biglietto già creato).
+        document.getElementById('viewMyTicket').style.display = 'none';
+
         // Variabile Nome e Cognome (yourname)
         var yourname = document.getElementById('formNameSurname').value;
 
@@ -17,18 +20,18 @@ document.getElementById('createTicket').addEventListener("click",
 
         } else {
 
-            // In caso la variabile Nome e Cognome (yourname) contenga dati corretti:
-            console.log(`User declared the name: ${yourname}. The value is valid.`);
+            // In caso la variabile Nome e Cognome (yourname) contenga dati corretti
+            // console.log(`User declared the name: ${yourname}. The value is valid.`);
 
             // Variabile Età del Passeggero (age)
             let age = document.getElementById('formAge').value;
-            console.log(`User declared the age: ${age}. The value is valid.`);
+            // console.log(`User declared the age: ${age}. The value is valid.`);
 
             // Variabile Chilometri (kilometres)
-            let kilometres = document.getElementById('formKm').value;
+            let kilometres = Number( document.getElementById('formKm').value );
             
             // Verifica la validità dei dati nella Variabile Chilometri (kilometres)
-            if (kilometres < 1) {
+            if (kilometres < 1 || isNaN(kilometres) == true) {
 
                 // In caso la variabile Chilometri (kilometres) contenga dati mancanti, nulli o non validi:
                 console.error(`Invalid data for variable kilometres. User input: ${kilometres}`);
@@ -36,8 +39,8 @@ document.getElementById('createTicket').addEventListener("click",
                 document.getElementById('guideText').style.display = 'block'
                 
             } else {
-                // In caso la variabile Chilometri (kilometres) contenga dati corretti, l'utente può procedere:
-                console.log(`User declared the kilometres: ${kilometres}. The value is valid.`);
+                // In caso la variabile Chilometri (kilometres) contenga dati corretti, l'utente può procedere.
+                // console.log(`User declared the kilometres: ${kilometres}. The value is valid.`);
 
                 // Dichiarazione Informazioni di viaggio
                 document.getElementById("title").innerText = `Benvenuto ${yourname}!`;
@@ -56,24 +59,20 @@ document.getElementById('createTicket').addEventListener("click",
 
                     // Biglietto: Calcolo Prezzo Definitivo con sconto 20% minorenni
                     ticketPrice *= 0.8;
-                    console.log("Ticket for Under18 users. Discount applied.");
+                    // console.log("Ticket for Under18 users. Discount applied.");
 
                 } else if (age == "Più di 65 Anni") {
 
                     // Biglietto: Calcolo Prezzo Definitivo con sconto 40% dedicato agli over 65 anni
                     ticketPrice *= 0.6;
-                    console.log("Ticket for Over65 users. Discount applied.");
+                    // console.log("Ticket for Over65 users. Discount applied.");
 
-                } else {
-
-                    // Biglietto: Sconto non applicabile per gli adulti 
-                    console.log("Ticket for Adult users. Discount not applied.");
-
-                }
+                } // Non è necessario specificare un else vuoto.
 
                 // Dichiarazione del Prezzo del biglietto per tutti gli utenti che hanno inserito dati validi
-                document.getElementById("ticketPrice").innerText = `€${ticketPrice.toFixed(2)}`; 
-                console.log(`Ticket successfully created. The price for ${yourname}'s Ticket, who wishes to travel ${kilometres}km, is: €${ticketPrice.toFixed(2)}.`);
+                ticketPrice = ticketPrice.toFixed(2);
+                document.getElementById("ticketPrice").innerText = `€${ticketPrice}`; 
+                console.log(`Ticket successfully created. The price for ${yourname}'s Ticket, who wishes to travel ${kilometres}km, is: €${ticketPrice}.`);
 
                 // Visibilità dei dati nel form post-creazione Biglietto
                 event.preventDefault();
